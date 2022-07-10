@@ -4,20 +4,17 @@ myImage.onclick = function() {
 	if (mySrc === 'images/firefox-icon.png') {
 		myImage.setAttribute ('src','images/light.png');}
 	else {
-		myImage.setAttribute ('src','images/firefox-icon.png');}
-}
+		myImage.setAttribute ('src','images/firefox-icon.png');}}
 
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
-
 function setUserName() {
-	let myName = prompt('Please enter your name.');
+	let myName = prompt('Please enter your name: ');
 	if (!myName || myName === null) {
 		setUserName();} 
 	else {
 		localStorage.setItem('name', myName);
-		myHeading.innerHTML = 'Mozilla is cool, ' + myName;}}
-
+		myHeading.innerHTML = 'Who is cool...'+myName+'~';}}
 myButton.onclick = function() {
 	setUserName();}
 
